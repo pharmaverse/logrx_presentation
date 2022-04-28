@@ -1,0 +1,30 @@
+---
+title: "RStudio Addin Overview"
+author: "Ben Straub"
+date: "`r Sys.Date()`"
+output: 
+   html_document:
+      css: ["rstudioaddin.css"]
+description: "How to build a quick RStudio Addin"
+---
+
+These materials are drawn from [RStudio Addins](https://rstudio.github.io/rstudioaddins/?msclkid=49f8bd61c69211ecbafd6ee106d2b8d6)
+
+There are two major types of addins:
+
+Text macros, which insert text into the console or source pane and in some cases transform text within the source pane. The insertInAddin addin defined above is an example of a text macro.
+
+Shiny Gadgets, which are fully interactive Shiny applications. Gadgets may also perform text transformations but they of course capable of much more.
+
+More details on Shiny Gadgets are provided below, but first we’ll take a look at using the rstudioapi package (which allows us to interact with RStudio from R code) and then what it takes to install and register an addin
+
+
+```{r, warning=FALSE, results='hold'}
+
+
+```
+
+```{r, warning=FALSE, results='hold'}
+
+
+```

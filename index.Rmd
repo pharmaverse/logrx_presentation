@@ -286,7 +286,7 @@ height = 500
 
 # End to End Example
 
-<iframe src='www/example.html' style="width:100%;height:85%;"/>
+<iframe src='www/rstudioaddin.html' style="width:100%;height:85%;"/>
 
 ---
 
