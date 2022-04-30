@@ -22,8 +22,12 @@ class: middle, center
 
 # Objective
 
+<br/>
+
 ## Demonstrate how to make a RStudio Addin and utilize the timber package to create logs for your R scripts.
 
+<br/>
+<br/>
 
 ```{r, echo=FALSE, out.width="25%"}
 knitr::include_graphics("www/img/ctg.png")
@@ -39,11 +43,11 @@ class: middle, center
 
 Showcase a RStudio Addin 
 
-Why worry about a log?
+Why worry about a log and what's up with the axes?
 
-Features of timber
+Notable features of the timber package
 
-Running code with timber package and Addin
+Running an R Script with the timber package and Addin
 
 ---
 
