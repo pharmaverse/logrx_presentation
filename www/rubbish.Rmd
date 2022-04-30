@@ -1,0 +1,26 @@
+---
+title: "Styling Rubbish"
+author: " "
+date: " "
+output: 
+html_document:
+css: ["rubbish.css"]
+description: "How to use the RStudio Addin - Styler"
+---
+
+```{r, echo = TRUE, eval = FALSE}
+rubbish <- function(x, y, z){
+  #comment without space
+  a_long_func_call(argument1,
+                   c(NA,1,1,1),
+                   ...)
+                   g(a)%>% b
+  new_x <-      y(sqrt(a_long_func_call))
+  if (x + new_x >3) 
+    {
+     1+11 ++(
+        3/3--3
+        )
+  }
+}
+```
