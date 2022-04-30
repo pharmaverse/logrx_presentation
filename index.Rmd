@@ -51,7 +51,7 @@ Why worry about a log and what's up with the axes?
 
 Notable features of the timber package
 
-Running an R Script with the timber package and Addin
+Running a R Script with the timber package and Addin
 
 ---
 
@@ -65,7 +65,7 @@ class: middle, center
 
 class: middle, center
 
-# Showcase a RStudio Addin
+# styler Addin
 
 {styler} is an R package that formats your code according to the [tidyverse style
 guide](https://style.tidyverse.org) in a non-invasive and safe way
@@ -77,6 +77,13 @@ knitr::include_graphics("https://raw.githubusercontent.com/lorenzwalthert/some_r
 
 ---
 
+class: middle, center
+
+# 
+
+<iframe src='www/rubbish_style.html' style="width:100%;height:85%;"/>
+
+---
 
 # RStudio Addin Walkthrough
 

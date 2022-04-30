@@ -1,30 +1,52 @@
 ---
 title: "RStudio Addin Overview"
-author: "Ben Straub"
-date: "`r Sys.Date()`"
+author: ""
+date: ""
 output: 
    html_document:
       css: ["rstudioaddin.css"]
 description: "How to build a quick RStudio Addin"
 ---
 
-These materials are drawn from [RStudio Addins](https://rstudio.github.io/rstudioaddins/?msclkid=49f8bd61c69211ecbafd6ee106d2b8d6)
+My quick example of building the Addin is taken from materials on [RStudio Addins](https://rstudio.github.io/rstudioaddins/?msclkid=49f8bd61c69211ecbafd6ee106d2b8d6)
 
-There are two major types of addins:
+## There are two major types of Addins:
 
-Text macros, which insert text into the console or source pane and in some cases transform text within the source pane. The insertInAddin addin defined above is an example of a text macro.
+* Text macros - insert text into the console or source pane and in some cases transform text within the source pane. The insertInAddin addin defined above is an example of a text macro.  
+  + styler example
+  + Demo example
 
-Shiny Gadgets, which are fully interactive Shiny applications. Gadgets may also perform text transformations but they of course capable of much more.
+* Shiny Gadgets -fully interactive Shiny applications. Gadgets may also perform text transformations but they of course capable of much more.
+  + timber will use this type of Addin
 
-More details on Shiny Gadgets are provided below, but first we’ll take a look at using the rstudioapi package (which allows us to interact with RStudio from R code) and then what it takes to install and register an addin
+## Demo Example
 
+We want to have an easy way to insert `%in%` as doing `Shift+5` is hurting our hands.
+`%in%` is used to identify if an element belongs to a vector or Dataframe
 
-```{r, warning=FALSE, results='hold'}
-
-
+```{r}
+"p" %in% c("r", "s", "t")
 ```
 
-```{r, warning=FALSE, results='hold'}
+To manipulate the RStudio environment - we will make use of the package `rstudioapi`, 
+to get under the hood of RStudio.  A great package, but could be an entire presentation!
 
+Two simple folders in our directory with two simple files will get us and running in
+now time!
 
+* R/insertInAddin.R
+* inst/rstudio/addins.dcf
+
+```{r, eval=FALSE, echo=TRUE,  verbatim = TRUE, message = FALSE}
+insertInAddin <- function() {
+  rstudioapi::insertText(" %in% ")
+}
+```
+
+<p></p>
+```{r, eval=FALSE, echo=TRUE, verbatim = TRUE, message = FALSE}
+Name: Insert %in%
+Description: Inserts `%in%` at the cursor position.
+Binding: insertInAddin
+Interactive: false
 ```
