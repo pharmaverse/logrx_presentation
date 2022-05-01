@@ -8,11 +8,11 @@
 
 
 body {
-  font-family: 'Space Mono';
+  font-family: 'EB Garamond', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
 }
 
 h1,h2,h3,h4 {
-  font-family: 'Dela Gothic One';
+  font-family: 'Oswald';
   text-transform: uppercase;
 }
 
@@ -54,7 +54,7 @@ ul {
 
 ul li:before {
   content: "";
-  background: var(--pink);
+  background: var(--black);
   font-weight: bold;
   font-size: 20px;
   display: inline-block;
@@ -91,8 +91,8 @@ li {
   width: 500px;
 }
 
-.pink {
-  color: var(--pink);
+.black {
+  color: var(--black);
 }
 
 .top-margin-200 {

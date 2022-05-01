@@ -53,6 +53,8 @@ Notable features of the timber package
 
 Running a R Script with the timber package and Addin
 
+NB: Assumptions
+
 ---
 
 class: middle, center
@@ -79,183 +81,99 @@ knitr::include_graphics("https://raw.githubusercontent.com/lorenzwalthert/some_r
 
 class: middle, center
 
-# 
 
 <iframe src='www/rubbish_style.html' style="width:100%;height:85%;"/>
 
 ---
 
-# RStudio Addin Walkthrough
 
 <iframe src='www/rstudioaddin.html' style="width:100%;height:85%;"/>
 
+---
+
+# Hello Addin
+
+A few simple files to create additional functionality within the RStudio Environment.
+
+```{r, out.width = "650px", echo = FALSE}
+knitr::include_graphics("rstudio_addin.gif")
+```
 
 ---
 
-# Challenges of using an Open-Source Language in a Regulated Environment
+# Why care about logs when programming with R?
 
-.two-column[
+.center[
+```{r, echo = FALSE, results = 'asis'}
+nomnoml::nomnoml(
+  "[<frame>Logging your concerns|
+[Logging in R]
 
-  .left-col[
-
-  **An Incomplete List of Challenges** 
-
-  - SAS® processes have years of use within regulatory agencies and tend to take precedence.   
-
-  - Company Firewalls and VPNs.  
-
-  - Sharing of code and data. 
-
-  - Does a R package bend to SAS® processes or does the package recreate/redefine the process?
-
-  - Who maintains the open-source product?
-
-  ]
-
-  .right-col[
-
-  **An Incomplete List of Solutions**
-
-  - Github, Gitlab and etc. help us to share, fix and build up code in an interactive and version-controlled process.
-
-  - R Consortium is working with the FDA to investigate delivering a submission in R.
-
-  - R packages already out there that mimic some of SAS® processes – {haven}, {SASxport}
-
-  - Pharma companies will have a vested interest in maintaining these packages.
-  
-  - New graduates are coming out of school with R and Python skills
-
-  ]
-
+[Logs|
+  R does not naturally create a log file
+  Many possible ways to create a log file
+  Clinical Environment creates a unique siutation
 ]
+
+[Audit-Ready]
+
+[Ready!|
+Quickly re-build an old environment
+Demonstrate all programs are clean and free of errors
+Custom global checks on programs
+]
+
+[SAS Logs]
+
+[R Logs|
+Does a R Log need to be like a SAS Log?
+Room for improvement
+More unique customization
+A new way of thinking!!?
+]
+
+[Logging in R] -> [Logs]
+[Audit-Ready] -> [Ready!]
+[SAS Logs] -> [R Logs]
+]",
+width = 1000,
+height = 500
+)
+```
+]
+
 
 ---
 
-# Risk Mitigation: Why xportr pacakge is not on CRAN(yet)
-.two-column[
-
-.left-col[
-
-### Backend dependancy issues
-
-### Limited time from OS developers
-
-### Difficulty Explaining the Need for Changes
-
-]
-
-.right-col[
-- [Dec 11, 2020 - SASxport Issue Reported](https://github.com/r-gregmisc/SASxport/issues/20) 
-
-- [Feb 5, 2021 - PR to SASxport merged in](https://github.com/r-gregmisc/SASxport/pull/21) 
-
-- [Nov 17, 2021 - Issue with haven reported](https://github.com/tidyverse/haven/issues/650) 
-
-- [Nov 23, 2021 - Fix in underlying haven library patched](https://github.com/WizardMac/ReadStat/pull/258) 
-
-- [Feb 21, 2022 - New release for haven backend](https://github.com/WizardMac/ReadStat/releases/tag/v1.1.8-rc0)
-
-- [Feb 25, 2022 - Backend updates made to haven](https://github.com/tidyverse/haven/pull/659) 
-
-- In Progress - Updates to xportr to switch to haven.
-
-]
-
-]
-
----
-
-# {metacore}
-
-.two-column[
-
-.left-col[
-![metacore](www/img/metacore.png)
-]
-
-.right-col[
-**Challenges for R in CRP**
-
-- No available R packages that can ingest and parse metadata for clinical trial datasets or help build a define.xml.
-
-**Solutions**
-
-- Built functions for parsing xml data and other data types specific to clinical trial datasets.
-
-- Functions and objects can be leveraged to help for dataset and variable creation as well as user for creating and codelist and derivations.
-
-**Future development path**
-
-- Working with different company's metadata files as well as in-development packages, e.g., admiral, to leverage metadata upstream or downstream.
-]
-
-]
-
----
-
-# {timber}
+# [timber](https://github.com/atorus-research/timber)
 
 .two-column[
 
 .left-col[
 ![timber](www/img/timber_shrink.png)
+
 ]
 
 
 .right-col[
-**Challenges for R in CRP**
 
-- There is no SAS-like log file for R-based programs that show traceability and help to create audit-ready code.
+**Objective**
 
-**Solutions**
+Tools to facilitate logging in a clinical environment. 
 
-- Created a utilities and wrapper functions to capture user info, session information and warnings and errors in an easy-to-read format.
+**Notable Highlights**
 
-- Allows for recreation of script, not just the output.
+Goal of making code easily traceable and reproducible.
 
-**Future development path**
+Built around the concept of creating a log for the execution of an R script that provides an overview of what happened as well as the environment that it happened in.
 
-- Interactive display screen to batch submit multiple programs.
+Built with Clinical Reporting Environment in mind.
 
-- What else should go in a log?  Companies might have different needs.
-]
-]
-
-
-
----
-
-# {xportr}
-
-.two-column[
-
-.left-col[
-![xportr](www/img/xportr.png)
-]
-
-.right-col[
-**Challenges for R in CRP**
-
-- Writing a compliant xpt file using haven or other xpt-supported packages is challenging for types, lengths and labels
-
-**Solutions**
-
-- Adding well defined metadata
-
-- Helps to write compliant xpt files
-
-- Logs and messages for information about metadata
-
-- Checks on the data before final output
-
-**Future development path**
-
-- How to ingest metadata specifications from different companies and different file formats
 ]
 ]
 
 ---
+
 
 # Features of timber
 
@@ -308,9 +226,15 @@ height = 500
 
 ---
 
-# timber Addin and axecute Walkthrough
+# timber adsl.R example
 
-<iframe src='www/rstudioaddin.html' style="width:100%;height:85%;"/>
+<iframe src='www/adslR.html' style="width:100%;height:85%;"/>
+
+---
+
+# timber adsl.log example
+
+<iframe src='www/adsllog.html' style="width:120%;height:85%;"/>
 
 
 ---
