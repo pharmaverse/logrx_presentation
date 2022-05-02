@@ -371,8 +371,7 @@ pre code {
 # admiral::use_ad_template(&quot;adsl&quot;)
 
 # Use this line to get latest timber install
-# devtools::install_github(&quot;https://github.com/atorus-research/timber&quot;,
-#                          ref = &quot;dev&quot;)
+#devtools::install_github(&quot;https://github.com/atorus-research/timber&quot;, ref = &quot;32a-fix-report&quot;)
 
 # Name: ADSL
 #
@@ -567,7 +566,7 @@ adsl_qc &lt;- adsl %&gt;% select(-ETHNIC)
 
 adsl_lst &lt;- diffdf(adsl, adsl_qc, file = &quot;adsl.lst&quot;)
 
-adsl_lst
+print(adsl_lst)
 
 message(&quot;Please check for this important message&quot;)
 

@@ -3,8 +3,7 @@
 # admiral::use_ad_template("adsl")
 
 # Use this line to get latest timber install
-# devtools::install_github("https://github.com/atorus-research/timber",
-#                          ref = "dev")
+#devtools::install_github("https://github.com/atorus-research/timber", ref = "32a-fix-report")
 
 # Name: ADSL
 #
@@ -199,7 +198,7 @@ adsl_qc <- adsl %>% select(-ETHNIC)
 
 adsl_lst <- diffdf(adsl, adsl_qc, file = "adsl.lst")
 
-adsl_lst
+print(adsl_lst)
 
 message("Please check for this important message")
 

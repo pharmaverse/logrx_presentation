@@ -3,7 +3,7 @@
 --------------------------------------------------------------------------------
 This log was generated using timber 0.0.1.9002
 timber package version: 0.0.1.9002
-timber build: Github (atorus-research/timber@1c94b812d24402d2da22be74622682b566adf443)
+timber build: Github (atorus-research/timber@5e5073a90a0d0673f359829e49f424775481eddf)
 timber link to repository: https://github.com/atorus-research/timber
 --------------------------------------------------------------------------------
 -                          User and File Information                           -
@@ -24,7 +24,7 @@ File Path: /cloud/project/www
  collate  C.UTF-8
  ctype    C.UTF-8
  tz       UTC
- date     2022-05-01
+ date     2022-05-02
  rstudio  2022.02.1+461.pro1 Prairie Trillium (server)
  pandoc   2.17.1.1 @ /usr/lib/rstudio-server/bin/quarto/bin/ (via rmarkdown)
 
@@ -39,6 +39,7 @@ File Path: /cloud/project/www
  callr          3.7.0      2021-04-20 [1] RSPM (R 4.2.0)
  cli            3.3.0      2022-04-25 [1] RSPM (R 4.2.0)
  crayon         1.5.1      2022-03-26 [1] RSPM (R 4.2.0)
+ curl           4.3.2      2021-06-23 [1] RSPM (R 4.2.0)
  desc           1.4.1      2022-03-06 [1] RSPM (R 4.2.0)
  devtools       2.4.3      2021-11-30 [1] RSPM (R 4.2.0)
  diffdf       * 1.0.4      2020-03-17 [1] RSPM (R 4.2.0)
@@ -90,12 +91,12 @@ File Path: /cloud/project/www
  tibble         3.1.6      2021-11-07 [1] RSPM (R 4.2.0)
  tidyr          1.2.0      2022-02-01 [1] RSPM (R 4.2.0)
  tidyselect     1.1.2      2022-02-21 [1] RSPM (R 4.2.0)
- timber         0.0.1.9002 2022-05-01 [1] Github
-	  (atorus-research/timber@1c94b81)
+ timber         0.0.1.9002 2022-05-02 [1] Github
+	  (atorus-research/timber@5e5073a)
  usethis        2.1.5      2021-12-09 [1] RSPM (R 4.2.0)
  utf8           1.2.2      2021-07-24 [1] RSPM (R 4.2.0)
  vctrs          0.4.1      2022-04-13 [1] RSPM (R 4.2.0)
- waiter       * 0.2.5      2022-01-03 [1] RSPM (R 4.2.0)
+ waiter         0.2.5      2022-01-03 [1] RSPM (R 4.2.0)
  withr          2.5.0      2022-03-03 [1] RSPM (R 4.2.0)
  xaringan       0.23       2022-03-08 [1] RSPM (R 4.2.0)
  xfun           0.30       2022-03-02 [1] RSPM (R 4.2.0)
@@ -152,19 +153,31 @@ function `lag` from {package:stats} by package:dplyr
 function `setequal` from {package:base} by package:dplyr
 function `ts` from {package:stats} by package:admiral.test
 function `cm` from {package:grDevices} by package:admiral.test
-function `?` from {package:utils} by devtools_shims
-function `help` from {package:utils} by devtools_shims
-function `system.file` from {package:base} by devtools_shims
-function `rlang_downstream_check` from {NA, org:r-lib} by org:r-lib
 function `plot` from {package:base} by package:graphics
 function `body<-` from {package:base} by package:methods
 function `kronecker` from {package:base} by package:methods
 --------------------------------------------------------------------------------
+-                          Used Package and Functions                          -
+--------------------------------------------------------------------------------
+{package:admiral} convert_blanks_to_na, derive_var_trtsdtm, derive_var_trtedtm, derive_vars_dtm_to_dt, derive_var_trtdurd, derive_var_disposition_dt, derive_var_disposition_status, derive_vars_dt, derive_vars_duration, lstalvdt_source, derive_var_lstalvdt, derive_agegr_fda
+{package:base} library, is.na, c, %in%, nchar, list, print, message, tempdir, save, file.path
+{package:diffdf} diffdf
+{package:dplyr} case_when, %>%, mutate, vars, if_else, slice, glimpse, select
+{package:utils} data
+--------------------------------------------------------------------------------
+-                       Unapproved Package and Functions                       -
+--------------------------------------------------------------------------------
+{package:admiral} derive_agegr_fda
+{package:base} is.na, c, %in%, nchar, list, print, message, tempdir, save, file.path
+{package:diffdf} diffdf
+{package:dplyr} case_when, mutate, vars, if_else, slice, glimpse, select
+{package:utils} data
+--------------------------------------------------------------------------------
 -                         Program Run Time Information                         -
 --------------------------------------------------------------------------------
-Start time: 2022-05-01 19:44:17 UTC
-End time: 2022-05-01 19:44:18 UTC
-Run time: 1 seconds
+Start time: 2022-05-02 02:49:14 UTC
+End time: 2022-05-02 02:49:16 UTC
+Run time: 2 seconds
 --------------------------------------------------------------------------------
 -                             Errors and Warnings                              -
 --------------------------------------------------------------------------------
@@ -231,6 +244,19 @@ Output:
 	$ DTH30FL  [3m[38;5;246m<chr>[39m[23m NA, NA, NA
 	$ DTHA30FL [3m[38;5;246m<chr>[39m[23m NA, NA, NA
 	$ DTHB30FL [3m[38;5;246m<chr>[39m[23m NA, NA, NA
+	Differences found between the objects!
+	
+	A summary is given below.
+	
+	There are columns in BASE that are not in COMPARE !!
+	All rows are shown in table below
+	
+	  =========
+	   COLUMNS 
+	  ---------
+	   ETHNIC  
+	  ---------
+	
 
 Result:
 	NULL

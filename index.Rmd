@@ -93,10 +93,11 @@ class: middle, center
 
 # Hello Addin
 
+
 A few simple files to create additional functionality within the RStudio Environment.
 
-```{r, out.width = "650px", echo = FALSE}
-knitr::include_graphics("rstudio_addin.gif")
+```{r, out.width = "1000px", echo = FALSE}
+knitr::include_graphics("oR4Uus.gif")
 ```
 
 ---
@@ -181,42 +182,38 @@ Built with Clinical Reporting Environment in mind.
 ```{r, echo = FALSE, results = 'asis'}
 nomnoml::nomnoml(
   "[<frame>timber workflow|
-  [axecute.R|
-  CRFs
-  Lab Assays
-  PK
-  Medical Coding
+  [R Script is Ready to go|
 ]
 
-[Tabulation|
-  SDTM
-  Traceability
-  No derivations
-  Comprehensive
+[Using Addin|
+  axecute your R Script
+  Toggle options avaiable 
+  Can update possible approved/unapproved
 ]
 
-[Analysis Ready|
-ADaM
-\"One Proc Away\"
-\"One %>% Away\"
-Derived data
-Traceability
+[Run Script from another Script|
+  Set up script to one file
+  Set up script for batch run
+  Will axecute one or multiple scripts
 ] 
 
-[Results|
-Data Displays
-Case Study Report
-Submission Package
-Quality Control
+[Inspect log File|
+  Metadata
+  User and File Information
+  Session Information (OS, Version, etc)
+  Package Info (Version, Dates, From)
+  External Software
+  Masked, Approved, Unapproved
+  Warnings, Errors and Messages
+  Output
+  Run time and Location
 ]
 
-[Delivery to Agency|
-eCTD Portal
-]
 
-[Collected] -> [Tabulation]
-[Tabulation] -> [Analysis Ready]
-[Results] -> [Delivery to Agency]
+[R Script is Ready to go] -> [Using Addin]
+[R Script is Ready to go] -> [Run Script from another Script]
+[Using Addin] -> [Inspect log File]
+[Run Script from another Script] -> [Inspect log File]
 ]",
 width = 1000,
 height = 500
@@ -226,13 +223,21 @@ height = 500
 
 ---
 
-# timber adsl.R example
+# admiral adsl.R template script with a few additions
 
 <iframe src='www/adslR.html' style="width:100%;height:85%;"/>
 
 ---
 
-# timber adsl.log example
+# Let's axecute
+
+```{r, out.width = "1000px", echo = FALSE}
+knitr::include_graphics("m8mnmc.gif")
+```
+
+---
+
+# axecuting adsl.R gives us an adsl.log
 
 <iframe src='www/adsllog.html' style="width:120%;height:85%;"/>
 

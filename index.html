@@ -4,7 +4,7 @@
     <title>timber!</title>
     <meta charset="utf-8" />
     <meta name="author" content="Ben Straub, GSK" />
-    <meta name="date" content="2022-05-01" />
+    <meta name="date" content="2022-05-02" />
     <script src="libs/header-attrs-2.14/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/fc.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/fc-fonts.css" rel="stylesheet" />
@@ -24,7 +24,7 @@ class: bottom, left, title-slide
 ## Creating Logs and Addins for audit-ready R Code
 ### Ben Straub, GSK
 ### Phuse Connect 2022
-### 2022-05-01
+### 2022-05-02
 
 ---
 
@@ -100,17 +100,18 @@ class: middle, center
 
 # Hello Addin
 
+
 A few simple files to create additional functionality within the RStudio Environment.
 
-&lt;img src="rstudio_addin.gif" width="650px" /&gt;
+&lt;img src="oR4Uus.gif" width="1000px" /&gt;
 
 ---
 
 # Why care about logs when programming with R?
 
 .center[
-<div id="htmlwidget-15b90867dd83f6d18df8" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-15b90867dd83f6d18df8">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>Logging your concerns|\n[Logging in R]\n\n[Logs|\n  R does not naturally create a log file\n  Many possible ways to create a log file\n  Clinical Environment creates a unique siutation\n]\n\n[Audit-Ready]\n\n[Ready!|\nQuickly re-build an old environment\nDemonstrate all programs are clean and free of errors\nCustom global checks on programs\n]\n\n[SAS Logs]\n\n[R Logs|\nDoes a R Log need to be like a SAS Log?\nRoom for improvement\nMore unique customization\nA new way of thinking!!?\n]\n\n[Logging in R] -> [Logs]\n[Audit-Ready] -> [Ready!]\n[SAS Logs] -> [R Logs]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-29e7d18e09f3d7a77dbe" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-29e7d18e09f3d7a77dbe">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>Logging your concerns|\n[Logging in R]\n\n[Logs|\n  R does not naturally create a log file\n  Many possible ways to create a log file\n  Clinical Environment creates a unique siutation\n]\n\n[Audit-Ready]\n\n[Ready!|\nQuickly re-build an old environment\nDemonstrate all programs are clean and free of errors\nCustom global checks on programs\n]\n\n[SAS Logs]\n\n[R Logs|\nDoes a R Log need to be like a SAS Log?\nRoom for improvement\nMore unique customization\nA new way of thinking!!?\n]\n\n[Logging in R] -> [Logs]\n[Audit-Ready] -> [Ready!]\n[SAS Logs] -> [R Logs]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
 ]
 
 
@@ -149,19 +150,25 @@ Built with Clinical Reporting Environment in mind.
 # Features of timber
 
 .center[
-<div id="htmlwidget-942fe6859fcb24107b78" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-942fe6859fcb24107b78">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>timber workflow|\n  [axecute.R|\n  CRFs\n  Lab Assays\n  PK\n  Medical Coding\n]\n\n[Tabulation|\n  SDTM\n  Traceability\n  No derivations\n  Comprehensive\n]\n\n[Analysis Ready|\nADaM\n\"One Proc Away\"\n\"One %>% Away\"\nDerived data\nTraceability\n] \n\n[Results|\nData Displays\nCase Study Report\nSubmission Package\nQuality Control\n]\n\n[Delivery to Agency|\neCTD Portal\n]\n\n[Collected] -> [Tabulation]\n[Tabulation] -> [Analysis Ready]\n[Results] -> [Delivery to Agency]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-5f10fc7e9a962e0e300a" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5f10fc7e9a962e0e300a">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>timber workflow|\n  [R Script is Ready to go|\n]\n\n[Using Addin|\n  axecute your R Script\n  Toggle options avaiable \n  Can update possible approved/unapproved\n]\n\n[Run Script from another Script|\n  Set up script to one file\n  Set up script for batch run\n  Will axecute one or multiple scripts\n] \n\n[Inspect log File|\n  Metadata\n  User and File Information\n  Session Information (OS, Version, etc)\n  Package Info (Version, Dates, From)\n  External Software\n  Masked, Approved, Unapproved\n  Warnings, Errors and Messages\n  Output\n  Run time and Location\n]\n\n\n[R Script is Ready to go] -> [Using Addin]\n[R Script is Ready to go] -> [Run Script from another Script]\n[Using Addin] -> [Inspect log File]\n[Run Script from another Script] -> [Inspect log File]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
 
-# timber adsl.R example
+# admiral adsl.R template script with a few additions
 
 &lt;iframe src='www/adslR.html' style="width:100%;height:85%;"/&gt;
 
 ---
 
-# timber adsl.log example
+# Let's axecute
+
+&lt;img src="m8mnmc.gif" width="1000px" /&gt;
+
+---
+
+# axecuting adsl.R gives us an adsl.log
 
 &lt;iframe src='www/adsllog.html' style="width:120%;height:85%;"/&gt;
 
