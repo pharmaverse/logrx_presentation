@@ -244,8 +244,13 @@ knitr::include_graphics("m8mnmc.gif")
 
 <iframe src='www/adsllog.html' style="width:120%;height:85%;"/>
 
+---
 
 ---
+
+# Approved packages and functions
+
+<iframe src='www/approved.html' style="width:120%;height:85%;"/>
 
 
 # Welcome to the `{pharmaverse}`!

@@ -3,7 +3,7 @@
 # admiral::use_ad_template("adsl")
 
 # Use this line to get latest timber install
-#devtools::install_github("https://github.com/atorus-research/timber", ref = "32a-fix-report")
+devtools::install_github("https://github.com/atorus-research/timber", ref = "dev")
 
 # Name: ADSL
 #
