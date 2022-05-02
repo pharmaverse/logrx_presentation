@@ -47,11 +47,11 @@ The styler Addin
 
 Showcase how to build a simple RStudio Addin 
 
-Why worry about a log and what's up with the axes?
+Why worry about a log?
 
-Notable features of the timber package
+Workflow and notable features of the timber log
 
-Running a R Script with the timber package and Addin
+axecute a R Script with the timber package and Addin
 
 NB: Assumptions
 
@@ -100,6 +100,8 @@ A few simple files to create additional functionality within the RStudio Environ
 knitr::include_graphics("oR4Uus.gif")
 ```
 
+* You can map this Addin to a shorcut/hot key.
+
 ---
 
 # Why care about logs when programming with R?
@@ -108,28 +110,29 @@ knitr::include_graphics("oR4Uus.gif")
 ```{r, echo = FALSE, results = 'asis'}
 nomnoml::nomnoml(
   "[<frame>Logging your concerns|
-[Logging in R]
-
-[Logs|
-  R does not naturally create a log file
-  Many possible ways to create a log file
-  Clinical Environment creates a unique siutation
-]
 
 [Audit-Ready]
 
 [Ready!|
 Quickly re-build an old environment
+Demonstrate programs have run successfully
 Demonstrate all programs are clean and free of errors
 Custom global checks on programs
+]
+  
+[Logging in R]
+
+[Logs|
+  R does not naturally create a log file
+  There are many possible ways to create a log file
+  Clinical Environment creates a unique siutation
 ]
 
 [SAS Logs]
 
 [R Logs|
 Does a R Log need to be like a SAS Log?
-Room for improvement
-More unique customization
+Could a user decide on unique customization
 A new way of thinking!!?
 ]
 
@@ -160,15 +163,15 @@ height = 500
 
 **Objective**
 
-Tools to facilitate logging in a clinical environment. 
+Tools to facilitate logging in a clinical environment to make code easily traceable and reproducible.
 
 **Notable Highlights**
-
-Goal of making code easily traceable and reproducible.
 
 Built around the concept of creating a log for the execution of an R script that provides an overview of what happened as well as the environment that it happened in.
 
 Built with Clinical Reporting Environment in mind.
+
+All code available on [GitHub](https://github.com/atorus-research/timber) and [upcoming vignettes and walk-throughs](https://atorus-research.github.io/timber/) on accompanying site.  
 
 ]
 ]
@@ -187,7 +190,7 @@ nomnoml::nomnoml(
 
 [Using Addin|
   axecute your R Script
-  Toggle options avaiable 
+  Toggle options available 
   Can update possible approved/unapproved
 ]
 

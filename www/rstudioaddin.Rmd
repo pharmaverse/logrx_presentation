@@ -12,30 +12,27 @@ My quick example of building the Addin is taken from materials on [RStudio Addin
 
 ## There are two major types of Addins:
 
-* Text macros - insert text into the console or source pane and in some cases transform text within the source pane. The insertInAddin addin defined above is an example of a text macro.  
+* Text macros - Either insert text into the console/script or transform text within the console/script pane. 
   + styler example
-  + Demo example
+  + Simple and contrived example
 
-* Shiny Gadgets -fully interactive Shiny applications. Gadgets may also perform text transformations but they of course capable of much more.
-  + timber will use this type of Addin
+* Shiny Gadgets -fully interactive Shiny applications. Gadgets may also perform text transformations but they are of course capable of much more.
+  + timber will use this type of Shiny Gadget Addin
 
-## Demo Example
+## Simple and Contrived Example
 
-We want to have an easy way to insert `%in%` as doing `Shift+5` is hurting our hands.
-`%in%` is used to identify if an element belongs to a vector or Dataframe
+We want to have an easy way to insert `%in%` as doing `Shift+5` is hurting our hands.  `%in%` is used to identify if an element belongs to a vector.
 
 ```{r}
 "p" %in% c("r", "s", "t")
 ```
 
-To manipulate the RStudio environment - we will make use of the package `rstudioapi`, 
-to get under the hood of RStudio.  A great package, but could be an entire presentation!
+We can create an RStudio Addin to help us build a quick way to insert `%in%` into our script.  To manipulate the RStudio environment, we will make use of the package [rstudioapi](https://rstudio.github.io/rstudio-extensions/rstudioapi.html), to get under the hood of RStudio.  A great package, but could be an entire presentation - make sure to check it out!
 
-Two simple folders in our directory with two simple files will get us and running in
-now time!
+Two simple folders in our directory with two simple files will get us up and running in no time!
 
-* R/insertInAddin.R
-* inst/rstudio/addins.dcf
+* `R/insertInAddin.R`
+* `inst/rstudio/addins.dcf`
 
 ```{r, eval=FALSE, echo=TRUE,  verbatim = TRUE, message = FALSE}
 insertInAddin <- function() {

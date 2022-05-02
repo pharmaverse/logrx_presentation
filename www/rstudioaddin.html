@@ -432,36 +432,37 @@ Addins</a></p>
 <div id="there-are-two-major-types-of-addins" class="section level2">
 <h2>There are two major types of Addins:</h2>
 <ul>
-<li>Text macros - insert text into the console or source pane and in
-some cases transform text within the source pane. The insertInAddin
-addin defined above is an example of a text macro.
+<li>Text macros - Either insert text into the console/script or
+transform text within the console/script pane.
 <ul>
 <li>styler example</li>
-<li>Demo example</li>
+<li>Simple and contrived example</li>
 </ul></li>
 <li>Shiny Gadgets -fully interactive Shiny applications. Gadgets may
-also perform text transformations but they of course capable of much
+also perform text transformations but they are of course capable of much
 more.
 <ul>
-<li>timber will use this type of Addin</li>
+<li>timber will use this type of Shiny Gadget Addin</li>
 </ul></li>
 </ul>
 </div>
-<div id="demo-example" class="section level2">
-<h2>Demo Example</h2>
+<div id="simple-and-contrived-example" class="section level2">
+<h2>Simple and Contrived Example</h2>
 <p>We want to have an easy way to insert <code>%in%</code> as doing
 <code>Shift+5</code> is hurting our hands. <code>%in%</code> is used to
-identify if an element belongs to a vector or Dataframe</p>
+identify if an element belongs to a vector.</p>
 <pre class="r"><code>&quot;p&quot; %in% c(&quot;r&quot;, &quot;s&quot;, &quot;t&quot;)</code></pre>
 <pre><code>## [1] FALSE</code></pre>
-<p>To manipulate the RStudio environment - we will make use of the
-package <code>rstudioapi</code>, to get under the hood of RStudio. A
-great package, but could be an entire presentation!</p>
+<p>We can create an RStudio Addin to help us build a quick way to insert
+<code>%in%</code> into our script. To manipulate the RStudio
+environment, we will make use of the package <a href="https://rstudio.github.io/rstudio-extensions/rstudioapi.html">rstudioapi</a>,
+to get under the hood of RStudio. A great package, but could be an
+entire presentation - make sure to check it out!</p>
 <p>Two simple folders in our directory with two simple files will get us
-and running in now time!</p>
+up and running in no time!</p>
 <ul>
-<li>R/insertInAddin.R</li>
-<li>inst/rstudio/addins.dcf</li>
+<li><code>R/insertInAddin.R</code></li>
+<li><code>inst/rstudio/addins.dcf</code></li>
 </ul>
 <pre class="r"><code>insertInAddin &lt;- function() {
   rstudioapi::insertText(&quot; %in% &quot;)

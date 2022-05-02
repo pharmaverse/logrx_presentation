@@ -56,11 +56,11 @@ The styler Addin
 
 Showcase how to build a simple RStudio Addin 
 
-Why worry about a log and what's up with the axes?
+Why worry about a log?
 
-Notable features of the timber package
+Workflow and notable features of the timber log
 
-Running a R Script with the timber package and Addin
+axecute a R Script with the timber package and Addin
 
 NB: Assumptions
 
@@ -105,13 +105,15 @@ A few simple files to create additional functionality within the RStudio Environ
 
 &lt;img src="oR4Uus.gif" width="1000px" /&gt;
 
+* You can map this Addin to a shorcut/hot key.
+
 ---
 
 # Why care about logs when programming with R?
 
 .center[
-<div id="htmlwidget-29e7d18e09f3d7a77dbe" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-29e7d18e09f3d7a77dbe">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>Logging your concerns|\n[Logging in R]\n\n[Logs|\n  R does not naturally create a log file\n  Many possible ways to create a log file\n  Clinical Environment creates a unique siutation\n]\n\n[Audit-Ready]\n\n[Ready!|\nQuickly re-build an old environment\nDemonstrate all programs are clean and free of errors\nCustom global checks on programs\n]\n\n[SAS Logs]\n\n[R Logs|\nDoes a R Log need to be like a SAS Log?\nRoom for improvement\nMore unique customization\nA new way of thinking!!?\n]\n\n[Logging in R] -> [Logs]\n[Audit-Ready] -> [Ready!]\n[SAS Logs] -> [R Logs]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0e5e1c534ff1b49bf3e9" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0e5e1c534ff1b49bf3e9">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>Logging your concerns|\n\n[Audit-Ready]\n\n[Ready!|\nQuickly re-build an old environment\nDemonstrate programs have run successfully\nDemonstrate all programs are clean and free of errors\nCustom global checks on programs\n]\n  \n[Logging in R]\n\n[Logs|\n  R does not naturally create a log file\n  There are many possible ways to create a log file\n  Clinical Environment creates a unique siutation\n]\n\n[SAS Logs]\n\n[R Logs|\nDoes a R Log need to be like a SAS Log?\nCould a user decide on unique customization\nA new way of thinking!!?\n]\n\n[Logging in R] -> [Logs]\n[Audit-Ready] -> [Ready!]\n[SAS Logs] -> [R Logs]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
 ]
 
 
@@ -131,15 +133,15 @@ A few simple files to create additional functionality within the RStudio Environ
 
 **Objective**
 
-Tools to facilitate logging in a clinical environment. 
+Tools to facilitate logging in a clinical environment to make code easily traceable and reproducible.
 
 **Notable Highlights**
-
-Goal of making code easily traceable and reproducible.
 
 Built around the concept of creating a log for the execution of an R script that provides an overview of what happened as well as the environment that it happened in.
 
 Built with Clinical Reporting Environment in mind.
+
+All code available on [GitHub](https://github.com/atorus-research/timber) and [upcoming vignettes and walk-throughs](https://atorus-research.github.io/timber/) on accompanying site.  
 
 ]
 ]
@@ -150,8 +152,8 @@ Built with Clinical Reporting Environment in mind.
 # Features of timber
 
 .center[
-<div id="htmlwidget-5f10fc7e9a962e0e300a" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5f10fc7e9a962e0e300a">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>timber workflow|\n  [R Script is Ready to go|\n]\n\n[Using Addin|\n  axecute your R Script\n  Toggle options avaiable \n  Can update possible approved/unapproved\n]\n\n[Run Script from another Script|\n  Set up script to one file\n  Set up script for batch run\n  Will axecute one or multiple scripts\n] \n\n[Inspect log File|\n  Metadata\n  User and File Information\n  Session Information (OS, Version, etc)\n  Package Info (Version, Dates, From)\n  External Software\n  Masked, Approved, Unapproved\n  Warnings, Errors and Messages\n  Output\n  Run time and Location\n]\n\n\n[R Script is Ready to go] -> [Using Addin]\n[R Script is Ready to go] -> [Run Script from another Script]\n[Using Addin] -> [Inspect log File]\n[Run Script from another Script] -> [Inspect log File]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-fa38ca0a642ba886dcc6" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fa38ca0a642ba886dcc6">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>timber workflow|\n  [R Script is Ready to go|\n]\n\n[Using Addin|\n  axecute your R Script\n  Toggle options available \n  Can update possible approved/unapproved\n]\n\n[Run Script from another Script|\n  Set up script to one file\n  Set up script for batch run\n  Will axecute one or multiple scripts\n] \n\n[Inspect log File|\n  Metadata\n  User and File Information\n  Session Information (OS, Version, etc)\n  Package Info (Version, Dates, From)\n  External Software\n  Masked, Approved, Unapproved\n  Warnings, Errors and Messages\n  Output\n  Run time and Location\n]\n\n\n[R Script is Ready to go] -> [Using Addin]\n[R Script is Ready to go] -> [Run Script from another Script]\n[Using Addin] -> [Inspect log File]\n[Run Script from another Script] -> [Inspect log File]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
