@@ -1,5 +1,5 @@
 ---
-title: "timber! axecute your logs"
+title: "timber!"
 subtitle: "Creating Logs and Addins for audit-ready R Code"
 author: "Ben Straub, GSK"
 institute: "Phuse Connect 2022"
