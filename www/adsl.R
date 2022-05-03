@@ -198,9 +198,7 @@ adsl_qc <- adsl %>% select(-ETHNIC)
 
 adsl_lst <- diffdf(adsl, adsl_qc, file = "adsl.lst")
 
-print(adsl_lst)
-
-message("Please check for this important message")
+message("Please check for this important message!!")
 
 # ---- Save output ----
 

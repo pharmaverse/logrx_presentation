@@ -186,18 +186,23 @@ All code available on [GitHub](https://github.com/atorus-research/timber) and [u
 nomnoml::nomnoml(
   "[<frame>timber workflow|
   [R Script is Ready to go|
+  timber is installed
+  Addin should be available after install
 ]
 
 [Using Addin|
   axecute your R Script
-  Toggle options available 
-  Can update possible approved/unapproved
+  Toggle options available for more nuance 
+  Recent update - now possible to include  
+  approved/unapproved functions.
 ]
 
-[Run Script from another Script|
-  Set up script to one file
-  Set up script for batch run
-  Will axecute one or multiple scripts
+[Run Script from another Script or Console|
+  Use a script to axecute one file
+  Run from console
+  Set up script for batch axecution
+  Any options available in Addin are also in axecute    
+  function call
 ] 
 
 [Inspect log File|
@@ -214,9 +219,9 @@ nomnoml::nomnoml(
 
 
 [R Script is Ready to go] -> [Using Addin]
-[R Script is Ready to go] -> [Run Script from another Script]
+[R Script is Ready to go] -> [Run Script from another Script or Console]
 [Using Addin] -> [Inspect log File]
-[Run Script from another Script] -> [Inspect log File]
+[Run Script from another Script or Console] -> [Inspect log File]
 ]",
 width = 1000,
 height = 500
@@ -246,12 +251,11 @@ knitr::include_graphics("m8mnmc.gif")
 
 ---
 
----
-
 # Approved packages and functions
 
 <iframe src='www/approved.html' style="width:120%;height:85%;"/>
 
+---
 
 # Welcome to the `{pharmaverse}`!
 
