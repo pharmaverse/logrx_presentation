@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>timber!</title>
+    <title>timber! axecute your logs</title>
     <meta charset="utf-8" />
     <meta name="author" content="Ben Straub, GSK" />
-    <meta name="date" content="2022-05-02" />
+    <meta name="date" content="2022-05-03" />
     <script src="libs/header-attrs-2.14/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/fc.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/fc-fonts.css" rel="stylesheet" />
@@ -20,11 +20,11 @@
     <textarea id="source">
 class: bottom, left, title-slide
 
-# timber!
+# timber! axecute your logs
 ## Creating Logs and Addins for audit-ready R Code
 ### Ben Straub, GSK
 ### Phuse Connect 2022
-### 2022-05-02
+### 2022-05-03
 
 ---
 
@@ -112,8 +112,8 @@ A few simple files to create additional functionality within the RStudio Environ
 # Why care about logs when programming with R?
 
 .center[
-<div id="htmlwidget-e65a9722b83d3768567b" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e65a9722b83d3768567b">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>Logging your concerns|\n\n[Audit-Ready]\n\n[Ready!|\nQuickly re-build an old environment\nDemonstrate programs have run successfully\nDemonstrate all programs are clean and free of errors\nCustom global checks on programs\n]\n  \n[Logging in R]\n\n[Logs|\n  R does not naturally create a log file\n  There are many possible ways to create a log file\n  Clinical Environment creates a unique siutation\n]\n\n[SAS Logs]\n\n[R Logs|\nDoes a R Log need to be like a SAS Log?\nCould a user decide on unique customization\nA new way of thinking!!?\n]\n\n[Logging in R] -> [Logs]\n[Audit-Ready] -> [Ready!]\n[SAS Logs] -> [R Logs]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2c16fac2eb234ef3d4e8" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2c16fac2eb234ef3d4e8">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>Logging your concerns|\n\n[Audit-Ready]\n\n[Ready!|\nQuickly re-build an old environment\nDemonstrate programs have run successfully\nDemonstrate all programs are clean and free of errors\nCustom global checks on programs\n]\n  \n[Logging in R]\n\n[Logs|\n  R does not naturally create a log file\n  There are many possible ways to create a log file\n  Clinical Environment creates a unique siutation\n]\n\n[SAS Logs]\n\n[R Logs|\nDoes a R Log need to be like a SAS Log?\nCould a user decide on unique customization\nA new way of thinking!!?\n]\n\n[Logging in R] -> [Logs]\n[Audit-Ready] -> [Ready!]\n[SAS Logs] -> [R Logs]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
 ]
 
 
@@ -152,8 +152,8 @@ All code available on [GitHub](https://github.com/atorus-research/timber) and [u
 # Features of timber
 
 .center[
-<div id="htmlwidget-14873c54b209ed7f08a0" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-14873c54b209ed7f08a0">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>timber workflow|\n  [R Script is Ready to go|\n]\n\n[Using Addin|\n  axecute your R Script\n  Toggle options available \n  Can update possible approved/unapproved\n]\n\n[Run Script from another Script|\n  Set up script to one file\n  Set up script for batch run\n  Will axecute one or multiple scripts\n] \n\n[Inspect log File|\n  Metadata\n  User and File Information\n  Session Information (OS, Version, etc)\n  Package Info (Version, Dates, From)\n  External Software\n  Masked, Approved, Unapproved\n  Warnings, Errors and Messages\n  Output\n  Run time and Location\n]\n\n\n[R Script is Ready to go] -> [Using Addin]\n[R Script is Ready to go] -> [Run Script from another Script]\n[Using Addin] -> [Inspect log File]\n[Run Script from another Script] -> [Inspect log File]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c221e34f7b4122fc287d" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c221e34f7b4122fc287d">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>timber workflow|\n  [R Script is Ready to go|\n]\n\n[Using Addin|\n  axecute your R Script\n  Toggle options available \n  Can update possible approved/unapproved\n]\n\n[Run Script from another Script|\n  Set up script to one file\n  Set up script for batch run\n  Will axecute one or multiple scripts\n] \n\n[Inspect log File|\n  Metadata\n  User and File Information\n  Session Information (OS, Version, etc)\n  Package Info (Version, Dates, From)\n  External Software\n  Masked, Approved, Unapproved\n  Warnings, Errors and Messages\n  Output\n  Run time and Location\n]\n\n\n[R Script is Ready to go] -> [Using Addin]\n[R Script is Ready to go] -> [Run Script from another Script]\n[Using Addin] -> [Inspect log File]\n[Run Script from another Script] -> [Inspect log File]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
@@ -170,17 +170,17 @@ All code available on [GitHub](https://github.com/atorus-research/timber) and [u
 
 ---
 
-# Approved packages and functions
-
-&lt;iframe src='www/approved.html' style="width:120%;height:85%;"/&gt;
-
----
-
 # axecuting adsl.R gives us an adsl.log
 
 &lt;iframe src='www/adsllog.html' style="width:120%;height:85%;"/&gt;
 
 ---
+
+---
+
+# Approved packages and functions
+
+&lt;iframe src='www/approved.html' style="width:120%;height:85%;"/&gt;
 
 
 # Welcome to the `{pharmaverse}`!
