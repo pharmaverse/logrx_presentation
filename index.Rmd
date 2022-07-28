@@ -1,5 +1,5 @@
 ---
-title: "timber! axecute your R code"
+title: "logrx! axecute your R code"
 subtitle: "Creating Logs and Addins for audit-ready R Code"
 author: "Ben Straub, GSK"
 institute: "Phuse Connect 2022"
@@ -26,7 +26,7 @@ class: middle, center
 
 Understand how to make a simple RStudio Addin.
 
-Understand how to axecute your R script using timber.
+Understand how to axecute your R script using logrx.
 
 <br/>
 <br/>
@@ -49,9 +49,9 @@ Showcase how to build a simple RStudio Addin
 
 Why worry about a log?
 
-Workflow and notable features of the timber log
+Workflow and notable features of the logrx log
 
-axecute a R Script with the timber package and Addin
+axecute a R Script with the logrx package and Addin
 
 NB: Assumptions
 
@@ -149,12 +149,12 @@ height = 500
 
 ---
 
-# [timber](https://github.com/atorus-research/timber)
+# [logrx](https://github.com/atorus-research/logrx)
 
 .two-column[
 
 .left-col[
-![timber](www/img/timber_shrink.png)
+![logrx](www/img/logrx_shrink.png)
 
 ]
 
@@ -171,7 +171,7 @@ Built around the concept of creating a log for the execution of an R script that
 
 Built with Clinical Reporting Environment in mind.
 
-All code available on [GitHub](https://github.com/atorus-research/timber) and [upcoming vignettes and walk-throughs](https://atorus-research.github.io/timber/) on accompanying site.  
+All code available on [GitHub](https://github.com/atorus-research/logrx) and [upcoming vignettes and walk-throughs](https://atorus-research.github.io/logrx/) on accompanying site.  
 
 ]
 ]
@@ -179,14 +179,14 @@ All code available on [GitHub](https://github.com/atorus-research/timber) and [u
 ---
 
 
-# Features of timber
+# Features of logrx
 
 .center[
 ```{r, echo = FALSE, results = 'asis'}
 nomnoml::nomnoml(
-  "[<frame>timber workflow|
+  "[<frame>logrx workflow|
   [R Script is Ready to go|
-  timber is installed
+  logrx is installed
   Addin should be available after install
 ]
 
