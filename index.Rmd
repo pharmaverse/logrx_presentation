@@ -100,7 +100,7 @@ A few simple files to create additional functionality within the RStudio Environ
 knitr::include_graphics("oR4Uus.gif")
 ```
 
-* You can map this Addin to a shorcut/hot key.
+* You can map this Addin to a shortcut/hot key.
 
 ---
 
@@ -154,7 +154,7 @@ height = 500
 .two-column[
 
 .left-col[
-![logrx](www/img/logrx_shrink.png)
+![logrx](www/img/logrx.png)
 
 ]
 

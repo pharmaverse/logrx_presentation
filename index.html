@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>timber! axecute your R code</title>
+    <title>logrx! axecute your R code</title>
     <meta charset="utf-8" />
     <meta name="author" content="Ben Straub, GSK" />
-    <meta name="date" content="2022-05-04" />
+    <meta name="date" content="2022-07-28" />
     <script src="libs/header-attrs-2.14/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/fc.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/fc-fonts.css" rel="stylesheet" />
@@ -20,11 +20,11 @@
     <textarea id="source">
 class: bottom, left, title-slide
 
-# timber! axecute your R code
+# logrx! axecute your R code
 ## Creating Logs and Addins for audit-ready R Code
 ### Ben Straub, GSK
 ### Phuse Connect 2022
-### 2022-05-04
+### 2022-07-28
 
 ---
 
@@ -37,7 +37,7 @@ class: middle, center
 
 Understand how to make a simple RStudio Addin.
 
-Understand how to axecute your R script using timber.
+Understand how to axecute your R script using logrx.
 
 &lt;br/&gt;
 &lt;br/&gt;
@@ -58,9 +58,9 @@ Showcase how to build a simple RStudio Addin
 
 Why worry about a log?
 
-Workflow and notable features of the timber log
+Workflow and notable features of the logrx log
 
-axecute a R Script with the timber package and Addin
+axecute a R Script with the logrx package and Addin
 
 NB: Assumptions
 
@@ -105,26 +105,26 @@ A few simple files to create additional functionality within the RStudio Environ
 
 &lt;img src="oR4Uus.gif" width="1000px" /&gt;
 
-* You can map this Addin to a shorcut/hot key.
+* You can map this Addin to a shortcut/hot key.
 
 ---
 
 # Why care about logs when programming with R?
 
 .center[
-<div id="htmlwidget-8710d0c9f4c7be917e43" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8710d0c9f4c7be917e43">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>Logging your concerns|\n\n[Audit-Ready]\n\n[Ready!|\nQuickly re-build an old environment\nDemonstrate programs have run successfully\nDemonstrate all programs are clean and free of errors\nCustom global checks on programs\n]\n  \n[Logging in R]\n\n[Logs|\n  R does not naturally create a log file\n  There are many possible ways to create a log file\n  Clinical Environment creates a unique siutation\n]\n\n[SAS Logs]\n\n[R Logs|\nDoes a R Log need to be like a SAS Log?\nCould a user decide on unique customization\nA new way of thinking!!?\n]\n\n[Logging in R] -> [Logs]\n[Audit-Ready] -> [Ready!]\n[SAS Logs] -> [R Logs]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2641a3b0b7361441d653" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2641a3b0b7361441d653">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>Logging your concerns|\n\n[Audit-Ready]\n\n[Ready!|\nQuickly re-build an old environment\nDemonstrate programs have run successfully\nDemonstrate all programs are clean and free of errors\nCustom global checks on programs\n]\n  \n[Logging in R]\n\n[Logs|\n  R does not naturally create a log file\n  There are many possible ways to create a log file\n  Clinical Environment creates a unique siutation\n]\n\n[SAS Logs]\n\n[R Logs|\nDoes a R Log need to be like a SAS Log?\nCould a user decide on unique customization\nA new way of thinking!!?\n]\n\n[Logging in R] -> [Logs]\n[Audit-Ready] -> [Ready!]\n[SAS Logs] -> [R Logs]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
 ]
 
 
 ---
 
-# [timber](https://github.com/atorus-research/timber)
+# [logrx](https://github.com/atorus-research/logrx)
 
 .two-column[
 
 .left-col[
-![timber](www/img/timber_shrink.png)
+![logrx](www/img/logrx.png)
 
 ]
 
@@ -141,7 +141,7 @@ Built around the concept of creating a log for the execution of an R script that
 
 Built with Clinical Reporting Environment in mind.
 
-All code available on [GitHub](https://github.com/atorus-research/timber) and [upcoming vignettes and walk-throughs](https://atorus-research.github.io/timber/) on accompanying site.  
+All code available on [GitHub](https://github.com/atorus-research/logrx) and [upcoming vignettes and walk-throughs](https://atorus-research.github.io/logrx/) on accompanying site.  
 
 ]
 ]
@@ -149,11 +149,11 @@ All code available on [GitHub](https://github.com/atorus-research/timber) and [u
 ---
 
 
-# Features of timber
+# Features of logrx
 
 .center[
-<div id="htmlwidget-ca779fc24b073eb04643" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ca779fc24b073eb04643">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>timber workflow|\n  [R Script is Ready to go|\n  timber is installed\n  Addin should be available after install\n]\n\n[Using Addin|\n  axecute your R Script\n  Toggle options available for more nuance \n  Recent update - now possible to include  \n  approved/unapproved functions.\n]\n\n[Run Script from another Script or Console|\n  Use a script to axecute one file\n  Run from console\n  Set up script for batch axecution\n  Any options available in Addin are also in axecute    \n  function call\n] \n\n[Inspect log File|\n  Metadata\n  User and File Information\n  Session Information (OS, Version, etc)\n  Package Info (Version, Dates, From)\n  External Software\n  Masked, Approved, Unapproved\n  Warnings, Errors and Messages\n  Output\n  Run time and Location\n]\n\n\n[R Script is Ready to go] -> [Using Addin]\n[R Script is Ready to go] -> [Run Script from another Script or Console]\n[Using Addin] -> [Inspect log File]\n[Run Script from another Script or Console] -> [Inspect log File]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-30563fa7ea089bba1c3c" style="width:1000px;height:500px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-30563fa7ea089bba1c3c">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[<frame>logrx workflow|\n  [R Script is Ready to go|\n  logrx is installed\n  Addin should be available after install\n]\n\n[Using Addin|\n  axecute your R Script\n  Toggle options available for more nuance \n  Recent update - now possible to include  \n  approved/unapproved functions.\n]\n\n[Run Script from another Script or Console|\n  Use a script to axecute one file\n  Run from console\n  Set up script for batch axecution\n  Any options available in Addin are also in axecute    \n  function call\n] \n\n[Inspect log File|\n  Metadata\n  User and File Information\n  Session Information (OS, Version, etc)\n  Package Info (Version, Dates, From)\n  External Software\n  Masked, Approved, Unapproved\n  Warnings, Errors and Messages\n  Output\n  Run time and Location\n]\n\n\n[R Script is Ready to go] -> [Using Addin]\n[R Script is Ready to go] -> [Run Script from another Script or Console]\n[Using Addin] -> [Inspect log File]\n[Run Script from another Script or Console] -> [Inspect log File]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
